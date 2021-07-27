@@ -1,5 +1,5 @@
 # QuadrigaCXHistoryFromOutlook
-This collection of C# applications / Powershell scripts will allow you to extract your QuadrigaCX trading history from your Outlook inbox, parsing data from all emails you've ever received from QuadrigaCX.
+This C# application will allow you to extract your QuadrigaCX trading history from your Outlook inbox, parsing data from all emails you've ever received from QuadrigaCX.
 
 It should be noted that this will not be a 100% completely accurate representation of your trading history. It has the following deficiencies:
 
@@ -13,8 +13,7 @@ It should be noted that this will not be a 100% completely accurate representati
 3. Select all of your email from QuadrigaCX in Outlook, and drag them from Outlook into the Data subfolder (this will save every single email as a .MSG file)
 4. Run QuadrigaCX_Outlook_MSG_to_TXT_Converter.exe from the folder that you extracted it to
 5. When you look at the Data folder, you should see new subfolders created, and each subfolder should contain .TXT representations of your emails, of particular interest is the "FinalReports" folder.
-6. Execute the Powershell script **extractToCsv.ps1** from the parent folder
-7. Validate all of the results in the FinalReport folder. 
-8. The results should be perfect, with the exception of the report **finished_and_partial_trades_combined.csv**. Due to the fact that the QuadrigaCX Filled Orders / Partial Filled order emails do not contain the amount of the assett that you sold for the second trading pair, this makes it difficult to calculate accurately; you will have to do this yourself. That being said, with all of the data you now have at your disposal, you are probably MUCH farther along in your journey than you were before you began! There is probably enough information to paint a complete picture for your accountant at the very least, who could then advise you on decisions to make for declaring trade prices.
+6. Validate all of the results in the FinalReport folder. 
+7. The results should be perfect, with the exception of the report **trades.csv**. Due to the fact that the QuadrigaCX Filled Orders / Partial Filled order emails do not contain the amount of the assett that you sold for the second trading pair, this makes it difficult to calculate accurately; you will have to do this yourself. That being said, with all of the data you now have at your disposal, you are probably MUCH farther along in your journey than you were before you began! There is probably enough information to paint a complete picture for your accountant at the very least, who could then advise you on decisions to make for declaring trade prices.
 
-### Requirements: Powershell 7, .NET Framework 4.8
+### Requirements: .NET Framework 4.8
